@@ -2,6 +2,18 @@
 
 import content from '../data/content.json';
 
+interface App {
+    id: number;
+    name: string;
+    description: string;
+    technologies: string[];
+    platforms: string[];
+    downloads: string;
+    rating: number;
+    iconPath: string;
+    url: string;
+}
+
 const AppShowcase = () => {
     const { appShowcase } = content;
 
@@ -10,8 +22,14 @@ const AppShowcase = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">{appShowcase.title}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
-                    {appShowcase.apps.map((app) => (
-                        <div key={app.id} className="group bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl sm:rounded-2xl p-1">
+                    {appShowcase.apps.map((app: App) => (
+                        <a
+                            key={app.id}
+                            href={app.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block group bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-xl sm:rounded-2xl p-1 transition-transform duration-300 ease-in-out hover:scale-[1.03]"
+                        >
                             <div className="bg-gradient-to-b from-gray-900 to-gray-800 rounded-xl sm:rounded-2xl overflow-hidden p-4 sm:p-6 relative">
                                 <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
                                     {/* App Icon */}
@@ -78,7 +96,7 @@ const AppShowcase = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
