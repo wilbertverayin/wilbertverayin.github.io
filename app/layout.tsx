@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'Wilbert Verayin - Fullstack Developer',
+    title: 'Wilbert Verayin - Fullstack Software Engineer',
     description:
         'Crafting robust, maintainable, and scalable systems with vast knowledge in Backend, Frontend, and DevOps. Explore my projects and app development expertise.',
     keywords: [
@@ -36,16 +36,16 @@ export const metadata: Metadata = {
     authors: [{ name: 'Wilbert Verayin' }],
     creator: 'Wilbert Verayin',
     openGraph: {
-        title: 'Wilbert Verayin - Fullstack Developer',
+        title: 'Wilbert Verayin - Fullstack Software Engineer',
         description: 'Crafting robust, maintainable, and scalable systems with vast knowledge in Backend, Frontend, and DevOps. Explore my projects and app development expertise.',
         url: 'https://wilbertverayin.com',
-        siteName: 'Wilbert Verayin - Fullstack Developer',
+        siteName: 'Wilbert Verayin - Fullstack Software Engineer',
         images: [
             {
                 url: '/og-image.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Wilbert Verayin - Fullstack Developer',
+                alt: 'Wilbert Verayin - Fullstack Software Engineer',
             },
         ],
         locale: 'en_US',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Wilbert Verayin - Fullstack Developer',
+        title: 'Wilbert Verayin - Fullstack Software Engineer',
         description: 'Crafting robust, maintainable, and scalable systems with vast knowledge in Backend, Frontend, and DevOps. Explore my projects and app development expertise.',
         creator: '@wilbertverayin',
         images: ['/og-image.jpg'],

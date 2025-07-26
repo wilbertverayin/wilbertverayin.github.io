@@ -73,7 +73,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Featured App Preview */}
-                <div className="max-w-lg mx-auto px-4">
+                <div className="hidden max-w-lg mx-auto px-4">
                     <div className="group relative bg-gradient-to-b from-gray-800/50 to-gray-900/50 rounded-2xl p-1 hover:from-blue-500/20 hover:to-purple-500/20 transition-all duration-500">
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
 
