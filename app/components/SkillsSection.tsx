@@ -14,9 +14,8 @@ interface Skill {
 
 const SkillsSection = () => {
     const { skillsSection } = content;
-    const skills: Skill[] = skillsSection.skills;
-    const coreSkills = skills.slice(0, 4);
-    const specializedSkills = skills.slice(4);
+    const coreSkills = skillsSection.coreSkills;
+    const specializedSkills =skillsSection.secondarySkills;
 
     return (
         <section className="py-16 md:py-20 relative">
@@ -31,11 +30,11 @@ const SkillsSection = () => {
                     <div className="space-y-4 sm:space-y-6 px-2">
                         <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2">
                             <svg className="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
-                                <path d={skills[0].iconPath} />
+                                <path d={coreSkills[0].iconPath} />
                             </svg>
                             {skillsSection.coreTechnologiesSubtitle}
                         </h3>
-                        {coreSkills.map((skill) => (
+                        {coreSkills.map((skill: Skill) => (
                             <SkillBar key={skill.name} skill={skill} />
                         ))}
                     </div>
@@ -44,12 +43,12 @@ const SkillsSection = () => {
                     <div className="space-y-4 sm:space-y-6 px-2">
                         <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2">
                             <svg className="w-5 h-5 text-purple-400" viewBox="0 0 24 24" fill="currentColor">
-                                <path d={skills[4].iconPath} />
+                                <path d={specializedSkills[0].iconPath} />
                             </svg>
                             {skillsSection.specializedSkillsSubtitle}
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {specializedSkills.map((skill) => (
+                            {specializedSkills.map((skill: Skill) => (
                                 <SpecializedSkillCard key={skill.name} skill={skill} />
                             ))}
                         </div>
