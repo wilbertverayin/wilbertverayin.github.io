@@ -1,26 +1,16 @@
 'use client';
 
-interface Skill {
-    name: string;
-    level: number;
-}
-
-const skills: Skill[] = [
-    { name: 'Backend', level: 95 },
-    { name: 'Frontend', level: 90 },
-    { name: 'Databases', level: 85 },
-    { name: 'Development Tools', level: 80 },
-    { name: 'Firebase', level: 88 },
-    { name: 'AI Tools', level: 85 },
-];
+import content from '../data/content.json';
 
 const SkillsSection = () => {
+    const { skillsSection } = content;
+
     return (
         <section className="py-16 md:py-20 relative">
             <div className="container mx-auto px-4">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-center">Technical Expertise</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-center">{skillsSection.title}</h2>
                 <p className="text-sm sm:text-base text-gray-400 text-center mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
-                    Specialized in modern mobile development technologies and frameworks
+                    {skillsSection.description}
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
@@ -28,29 +18,22 @@ const SkillsSection = () => {
                     <div className="space-y-4 sm:space-y-6 px-2">
                         <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2">
                             <svg className="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
+                                <path d={skillsSection.skills[0].iconPath} />
                             </svg>
-                            Core Technologies
+                            {skillsSection.coreTechnologiesSubtitle}
                         </h3>
-                        {skills.slice(0, 4).map((skill) => (
+                        {skillsSection.skills.slice(0, 4).map((skill) => (
                             <div key={skill.name} className="group relative">
                                 <div className="flex flex-wrap sm:flex-nowrap justify-between mb-2 gap-2">
                                     <div className="flex flex-wrap sm:flex-nowrap items-center gap-2">
                                         <span className="font-medium">{skill.name}</span>
                                         {/* Skill-specific badges */}
                                         <div className="flex flex-wrap sm:flex-nowrap gap-1">
-                                            {skill.name === 'Backend' && (
-                                                <span className="px-2 py-0.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Node.js(Nest.js)</span>
-                                            )}
-                                            {skill.name === 'Frontend' && (
-                                                <span className="px-2 py-0.5 text-xs rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20">Vue3(Quasar), React(NextJS)</span>
-                                            )}
-                                            {skill.name === 'Databases' && (
-                                                <span className="px-2 py-0.5 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">MySQL, MongoDB</span>
-                                            )}
-                                            {skill.name === 'Development Tools' && (
-                                                <span className="px-2 py-0.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">VSCode, Git</span>
-                                            )}
+                                            {skill.badges.map((badge, badgeIndex) => (
+                                                <span key={badgeIndex} className={`px-2 py-0.5 text-xs rounded-full ${skill.name === 'Backend' ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' : skill.name === 'Frontend' ? 'bg-orange-500/10 text-orange-400 border border-orange-500/20' : skill.name === 'Databases' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : skill.name === 'Development Tools' ? 'bg-purple-500/10 text-purple-400 border border-purple-500/20' : ''}`}>
+                                                    {badge}
+                                                </span>
+                                            ))}
                                         </div>
                                     </div>
                                     <span className="text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">{skill.level}%</span>
@@ -84,12 +67,12 @@ const SkillsSection = () => {
                     <div className="space-y-4 sm:space-y-6 px-2">
                         <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 flex items-center gap-2">
                             <svg className="w-5 h-5 text-purple-400" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12,0L3,7L4.63,8.27L12,14L19.36,8.27L21,7L12,0M19.37,10.73L12,16.47L4.62,10.73L3,12L12,19L21,12L19.37,10.73M19.37,15.73L12,21.47L4.62,15.73L3,17L12,24L21,17L19.37,15.73" />
+                                <path d={skillsSection.skills[4].iconPath} />
                             </svg>
-                            Specialized Skills
+                            {skillsSection.specializedSkillsSubtitle}
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {skills.slice(4).map((skill) => (
+                            {skillsSection.skills.slice(4).map((skill) => (
                                 <div
                                     key={skill.name}
                                     className="group bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-colors relative overflow-hidden"
@@ -110,11 +93,11 @@ const SkillsSection = () => {
                                     <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
                                         {skill.name.includes('Firebase') ? (
                                             <svg className="absolute -right-4 -bottom-4 w-24 h-24 text-yellow-500 transform rotate-12" viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M3.89 15.672L6.255.461A.542.542 0 017.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 00-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 001.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 00-.96 0L3.53 17.984z" />
+                                                <path d={skill.iconPath} />
                                             </svg>
                                         ) : (
                                             <svg className="absolute -right-4 -bottom-4 w-24 h-24 transform rotate-12" viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M12,16L19.36,10.27L21,9L12,2L3,9L4.63,10.27M12,18.54L4.62,12.81L3,14.07L12,21.07L21,14.07L19.37,12.8L12,18.54Z" />
+                                                <path d={skill.iconPath} />
                                             </svg>
                                         )}
                                     </div>
