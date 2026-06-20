@@ -98,6 +98,24 @@
       "tech": ["TypeScript", "Vue.js", "Node.js", "GCP"],
       "url": "https://medcertgen.visibleclinic.com",
       "screenshot": "/assets/screenshots/medcertgen.png"
+    },
+    {
+      "id": "jomella-pides",
+      "name": "Jomella Pides",
+      "partOf": "Visible Clinic",
+      "product": "Clinic portal for Jomella Pides, built on the Visible Clinic platform.",
+      "tech": ["TypeScript", "Vue.js", "GCP"],
+      "url": "https://jomellapides.visibleclinic.com",
+      "screenshot": "/assets/screenshots/jomellapides.png"
+    },
+    {
+      "id": "clearvision-little-stars",
+      "name": "Clear Vision Little Stars",
+      "partOf": "Visible Clinic",
+      "product": "Pediatric eye clinic portal built on the Visible Clinic platform.",
+      "tech": ["TypeScript", "Vue.js", "GCP"],
+      "url": "https://clearvisionlittlestars.visibleclinic.com",
+      "screenshot": "/assets/screenshots/clearvisionlittlestars.png"
     }
   ]
 }
