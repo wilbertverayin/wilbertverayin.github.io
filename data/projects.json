@@ -12,6 +12,17 @@
       "video": "/assets/videos/syncshift.mp4"
     },
     {
+      "id": "odola",
+      "name": "Odola",
+      "date": "May 2026 – Present",
+      "product": "Online banking platform for UK immigrants.",
+      "role": "Consultant",
+      "impact": "↓20% build artifact size · admin tooling for 200+ legal doc flows",
+      "tech": ["Node.js", "Fastify", "GCP", "Terraform"],
+      "url": "https://odola.com",
+      "screenshot": "/assets/screenshots/odola.png"
+    },
+    {
       "id": "freedom-family",
       "name": "Freedom Family",
       "date": "Mar 2023 – Aug 2025",
@@ -107,15 +118,6 @@
       "tech": ["TypeScript", "Vue.js", "GCP"],
       "url": "https://jomellapides.visibleclinic.com",
       "screenshot": "/assets/screenshots/jomellapides.png"
-    },
-    {
-      "id": "odola",
-      "name": "Odola",
-      "product": "Online banking platform for UK immigrants. Built admin tooling, managed legal document flows, and optimized build artifacts.",
-      "role": "Consultant",
-      "tech": ["Node.js", "Fastify", "GCP", "Terraform"],
-      "url": "https://odola.com",
-      "screenshot": "/assets/screenshots/odola.png"
     },
     {
       "id": "clearvision-little-stars",

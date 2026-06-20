@@ -1,0 +1,141 @@
+{
+  "experience": [
+    {
+      "title": "Consultant",
+      "company": "Odola",
+      "companySub": "Online Banking for UK Immigrants",
+      "date": "May 2026 – Present",
+      "bullets": [
+        "Reduced deployment times by optimizing build artifact size by 20%, improving release speed.",
+        "Created admin tools for managing legal documents and tracking user acceptance of Terms and Conditions."
+      ],
+      "tech": ["Node.js", "Fastify", "GCP", "Terraform"]
+    },
+    {
+      "title": "Senior Full-stack Engineer — Product & AI",
+      "company": "Dataspark",
+      "companySub": "Distributed Data Intelligence",
+      "date": "Sep 2025 – Present",
+      "note": "Sole engineer responsible for the full ETL platform — architecture decisions, technology selection, database design, backend, and frontend.",
+      "bullets": [
+        "Increased backend throughput by 50% migrating serial data processing to parallel execution with regulated throttling (Node.js, Redis).",
+        "Reduced data latency by 50% by redesigning ingestion and analytics pipelines and optimizing PostgreSQL queries.",
+        "Improved platform security for enterprise customers implementing RBAC, SSO flows (Auth0), and audit-grade permission controls.",
+        "Built analytics dashboards enabling business stakeholders to replace manual reporting with self-serve data exploration.",
+        "Accelerated deployments from hours to minutes via CI/CD pipelines and containerized environments (Docker, GitHub Actions)."
+      ],
+      "tech": ["TypeScript", "Node.js", "Vue.js", "Redis", "PostgreSQL", "Azure SQL", "Docker"]
+    },
+    {
+      "title": "Software Developer Engineer III",
+      "company": "Freedom Family Limited",
+      "companySub": "Global Publishing SaaS",
+      "date": "Mar 2023 – Aug 2025",
+      "bullets": [
+        "Cut code review cycle time by 50% implementing automated linting, test pipelines, and CI workflows using GitHub Actions.",
+        "Improved SEO scores and page load time by 30% via SSR implementation and performance tuning.",
+        "Built publishing analytics dashboards used by business and ops team to replace manual spreadsheet reporting."
+      ],
+      "tech": ["TypeScript", "Node.js", "GraphQL", "AWS (S3, ECS)", "Cloudflare", "GitHub Actions"]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Billease",
+      "companySub": "Fintech Platform (10M+ Downloads)",
+      "date": "Sep 2022 – Mar 2023",
+      "bullets": [
+        "Reduced customer service response times by ~30% by unifying chat, SMS, and email into a centralized CRM.",
+        "Built internal CRM automation used by 200+ support agents, lowering operational effort by ~10%.",
+        "Improved API reliability for 1M+ monthly users through optimized backend and secure data workflows."
+      ],
+      "tech": ["Python", "Redis", "PostgreSQL", "Vue.js"]
+    },
+    {
+      "title": "Senior Software Engineer (Contract)",
+      "company": "ContactOut",
+      "companySub": null,
+      "date": "Jan 2022 – Aug 2022",
+      "bullets": [
+        "Introduced user action tracking enabling 20% MTTR improvement.",
+        "Reduced async workflow failures by ~10% with improved event-driven processing architecture."
+      ],
+      "tech": ["React", "TypeScript", "PHP Laravel", "REST APIs"]
+    },
+    {
+      "title": "Software Developer Engineer III",
+      "company": "Freedom Family Limited",
+      "companySub": "on-site",
+      "date": "Mar 2015 – Dec 2021",
+      "bullets": [
+        "Grew 6 junior engineers into senior roles through 6 months of close mentorship, paired with structured coding standards and review workflows.",
+        "Reduced manual work by 90% by building multi-layer automations across UI, APIs, and backend tasks.",
+        "Generated 1000+ customer leads by building the company's marketing website."
+      ],
+      "tech": ["JavaScript", "Angular", "React", "Vue", "Node.js", "PHP/Laravel"]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Stratpoint Technologies Inc.",
+      "companySub": null,
+      "date": "Oct 2013 – Feb 2015",
+      "bullets": [
+        "Improved backend performance by ~50% migrating legacy PHP services to Laravel with modern REST APIs.",
+        "Built a high-reliability telecom billing engine supporting core transaction workflows.",
+        "Built a real-time recommendation engine using Apache Oryx to personalize telecom service offerings."
+      ],
+      "tech": ["PHP", "Laravel", "MySQL", "Apache Oryx"]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Backend & Languages",
+      "items": ["TypeScript", "Node.js", "NestJS", "Fastify", "Python", "PHP (Laravel)"]
+    },
+    {
+      "category": "Architecture",
+      "items": ["REST APIs", "GraphQL", "Event-driven", "Message queues", "Distributed systems"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": ["AWS", "GCP", "Docker", "Terraform", "Cloudflare", "GitHub Actions"]
+    },
+    {
+      "category": "Database & Cache",
+      "items": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Azure SQL"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["Vue (Quasar)", "React (Next.js)", "TailwindCSS"]
+    },
+    {
+      "category": "AI & Tooling",
+      "items": ["Claude Code", "Agentic workflows", "Context engineering", "Auth0"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Visible Clinic",
+      "url": "https://visibleclinic.com",
+      "desc": "AI-integrated SaaS for medical professionals built end-to-end. Google Vision and Gemma models power image-based diagnosis suggestions and clinical triage.",
+      "subs": [
+        { "name": "Eye Triage", "url": "https://eyetriage.visibleclinic.com", "desc": "AI ophthalmology triage" },
+        { "name": "OnlineHPI", "url": "https://onlinehpi.visibleclinic.com", "desc": "AI-assisted diagnosis intake" },
+        { "name": "Med Cert Gen", "url": "https://medcertgen.visibleclinic.com", "desc": "Automated certification" }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of the Philippines",
+      "degree": "BS Computer Science · 2009 – 2013"
+    },
+    {
+      "school": "Certifications",
+      "certs": [
+        "CS50: Introduction to Computer Science — Harvard",
+        "JavaScript Algorithms & Data Structures — freeCodeCamp",
+        "Python Programming — Coursera"
+      ]
+    }
+  ]
+}
