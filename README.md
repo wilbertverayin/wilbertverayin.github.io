@@ -1,140 +1,36 @@
-# Mobile Developer Portfolio Template
+# wilbertverayin.github.io
 
-[Demo](https://www.devportfoliotemplates.com/portfolio-templates/mobile-developer)
+Personal portfolio for Wilbert Verayin — Senior Full Stack Engineer.
 
-## Getting Started
+Live at [wilbertverayin.com](https://wilbertverayin.com)
 
-You have two options to get started with this template:
+## Stack
 
-### Option 1: Using Git Sparse Checkout
+Static HTML/CSS/JS — no build step, no framework. Deployed via GitHub Pages.
 
-If you want to clone only this specific template:
+- `index.html` — landing page (hero, what I build, featured projects, contact)
+- `projects/index.html` — full project list
+- `resume/index.html` — resume route
+- `data/projects.json` — single source of truth for all project data
+- `assets/` — screenshots and videos used by project cards
 
-```bash
-git clone --no-checkout https://github.com/devportfoliotemplates/devportfoliotemplates.git
-cd devportfoliotemplates
-git sparse-checkout init --cone
-git sparse-checkout set mobile-developer-portfolio-template
-git checkout
-```
+## Projects
 
-### Option 2: Direct Download
+**Professional**
+- [Dataspark](https://dataspark.nl) — ETL & analytics platform (Sep 2025 – Present)
+- [Freedom Family](https://freedom.h.ki) — Global publishing SaaS (Mar 2023 – Aug 2025)
+- [Heartbeat](https://h.ki) — Patient vitals monitoring
+- [Billease](https://billease.com) — BNPL fintech, 10M+ downloads (Sep 2022 – Mar 2023)
+- [ContactOut](https://contactout.com) — Recruiter contact tool (Jan 2022 – Aug 2022)
 
-You can download this template as a ZIP file:
-
-1. Visit [download-directory.github.io](https://download-directory.github.io/)
-2. Paste the URL of this portfolio folder: `https://github.com/devportfoliotemplates/devportfoliotemplates/tree/main/mobile-developer-portfolio-template`
-3. Download and extract the ZIP file
-
-### Running the Template
-
-Once you have the template:
-
-1. Install dependencies:
-
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-2. Run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the portfolio.
-
-## Customization
-
-### Personal Information
-
-1. Update metadata in `app/layout.tsx`:
-
-   - Site title
-   - Description
-   - Open Graph metadata
-   - Favicon
-
-2. Modify content in `app/page.tsx`:
-
-   - Hero section
-   - About section
-   - Projects
-   - Contact information
-
-3. Replace assets:
-   - Replace images in the `public` directory
-   - Update social media icons
-   - Modify logo if needed
-
-### Styling
-
-1. Colors and Theme:
-
-   - Customize colors in `tailwind.config.js`
-   - Modify theme variables in `app/globals.css`
-
-2. Typography:
-
-   - Update font families in `tailwind.config.js`
-   - Modify text sizes and weights
-
-3. Layout:
-   - Adjust spacing and padding in component files
-   - Modify responsive breakpoints in `tailwind.config.js`
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Build Errors**
-
-   - Ensure all dependencies are installed
-   - Clear `.next` folder and node_modules
-   - Run `npm install` again
-
-2. **Styling Issues**
-
-   - Run `npm run build` to ensure TailwindCSS classes are generated
-   - Check for conflicting styles in `globals.css`
-
-3. **Image Loading**
-   - Verify images are in the correct format (PNG, JPG, WebP)
-   - Check image paths are correct
-   - Ensure images are in the `public` directory
+**Personal**
+- [Visible Clinic](https://visibleclinic.com) — AI SaaS for medical professionals (Google Vision + Gemma)
+  - [Eye Triage](https://eyetriage.visibleclinic.com) — AI ophthalmology triage
+  - [OnlineHPI](https://onlinehpi.visibleclinic.com) — AI-assisted diagnosis intake
+  - [Med Cert Gen](https://medcertgen.visibleclinic.com) — Automated medical certification
 
 ## Deployment
 
-Follow these steps to deploy your portfolio for free using GitHub and Vercel:
+Push to `master` → GitHub Pages builds and deploys automatically.
 
-1. Create a new GitHub repository
-
-2. Push your portfolio to GitHub
-
-3. Deploy with Vercel:
-   - Go to [Vercel](https://vercel.com)
-   - Sign up or log in with GitHub
-   - Click "New Project"
-   - Import your GitHub repository
-   - Vercel will automatically detect Next.js
-   - Click "Deploy"
-
-Your portfolio will be live in minutes with a free Vercel domain (e.g., `your-repo.vercel.app`). You can later add a custom domain in your Vercel project settings.
-
-## Support
-
-If you find these templates helpful, please consider:
-
-- Starring the repository ⭐
-- Sharing with other developers
-- [Buying me a coffee](https://www.buymeacoffee.com/andreiancu) ☕
-
-For issues and feature requests, please [create an issue](https://github.com/devportfoliotemplates/devportfoliotemplates/issues).
+Custom domain configured via `CNAME` → `wilbertverayin.com`
