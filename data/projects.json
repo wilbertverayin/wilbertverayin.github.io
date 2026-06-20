@@ -1,0 +1,103 @@
+{
+  "professional": [
+    {
+      "id": "dataspark",
+      "name": "Dataspark",
+      "date": "Sep 2025 – Present",
+      "product": "ETL and analytics platform for mid-market companies to replace manual reporting.",
+      "role": "Sole engineer — architecture, backend, frontend",
+      "impact": "↑50% backend throughput · ↓50% data latency",
+      "tech": ["TypeScript", "Node.js", "Vue.js", "PostgreSQL", "Redis", "Azure SQL", "Docker"],
+      "url": "https://dataspark.nl",
+      "video": "/assets/videos/syncshift.mp4"
+    },
+    {
+      "id": "freedom-family",
+      "name": "Freedom Family",
+      "date": "Mar 2023 – Aug 2025",
+      "product": "Global publishing SaaS for content creators and media companies.",
+      "role": "SDE III — full stack, CI/CD, platform performance",
+      "impact": "↓50% code review cycle · ↑30% page load score",
+      "tech": ["TypeScript", "Node.js", "GraphQL", "AWS (S3, ECS)", "Cloudflare", "GitHub Actions"],
+      "url": "https://freedom.h.ki",
+      "screenshot": "/assets/screenshots/freedom.png"
+    },
+    {
+      "id": "heartbeat",
+      "name": "Heartbeat",
+      "date": null,
+      "product": "Patient health monitoring tool that tracks vitals and clinical indicators, giving medical professionals a real-time view of patient status.",
+      "role": null,
+      "impact": null,
+      "tech": ["TypeScript", "Vue.js", "Node.js", "GCP"],
+      "url": "https://h.ki",
+      "screenshot": "/assets/screenshots/heartbeat.png"
+    },
+    {
+      "id": "billease",
+      "name": "Billease",
+      "date": "Sep 2022 – Mar 2023",
+      "product": "Buy-now-pay-later fintech app with 10M+ downloads serving the Philippines market.",
+      "role": "Senior Engineer — CRM, support tooling, API reliability",
+      "impact": "↓30% support response time · 200+ agents served",
+      "tech": ["Python", "Vue.js", "PostgreSQL", "Redis"],
+      "url": "https://billease.com",
+      "screenshot": "/assets/screenshots/billease.png"
+    },
+    {
+      "id": "contactout",
+      "name": "ContactOut",
+      "date": "Jan 2022 – Aug 2022",
+      "product": "Recruiter tool that surfaces personal contact info for LinkedIn profiles.",
+      "role": "Senior Engineer (Contract) — tracking, async workflows",
+      "impact": "↑20% MTTR · ↓10% async workflow failures",
+      "tech": ["React", "TypeScript", "PHP Laravel", "REST APIs"],
+      "url": "https://contactout.com",
+      "screenshot": "/assets/screenshots/contactout.png"
+    }
+  ],
+  "personal": [
+    {
+      "id": "visible-clinic",
+      "name": "Visible Clinic",
+      "product": "AI-integrated SaaS for medical professionals. Google Vision and Gemma models power image-based diagnosis suggestions and clinical triage.",
+      "role": "Solo — end-to-end design, build, and deployment",
+      "tech": ["TypeScript", "Node.js", "Vue.js", "Google Vision", "Gemma", "GCP"],
+      "url": "https://visibleclinic.com",
+      "screenshot": "/assets/screenshots/visibleclinic.png",
+      "featured": true,
+      "subs": [
+        { "name": "Eye Triage", "url": "https://eyetriage.visibleclinic.com", "desc": "AI ophthalmology triage" },
+        { "name": "OnlineHPI", "url": "https://onlinehpi.visibleclinic.com", "desc": "AI-assisted diagnosis intake" },
+        { "name": "Med Cert Gen", "url": "https://medcertgen.visibleclinic.com", "desc": "Automated certification" }
+      ]
+    },
+    {
+      "id": "eye-triage",
+      "name": "Eye Triage",
+      "partOf": "Visible Clinic",
+      "product": "AI-powered ophthalmology triage tool that assists doctors in prioritizing and assessing eye conditions from patient-submitted images.",
+      "tech": ["TypeScript", "Vue.js", "Google Vision", "GCP"],
+      "url": "https://eyetriage.visibleclinic.com",
+      "screenshot": "/assets/screenshots/eyetriage.png"
+    },
+    {
+      "id": "online-hpi",
+      "name": "OnlineHPI",
+      "partOf": "Visible Clinic",
+      "product": "AI-assisted history of present illness tool that guides patients through structured intake, surfacing insights for the attending physician.",
+      "tech": ["TypeScript", "Vue.js", "Gemma", "GCP"],
+      "url": "https://onlinehpi.visibleclinic.com",
+      "screenshot": "/assets/screenshots/onlinehpi.png"
+    },
+    {
+      "id": "med-cert-gen",
+      "name": "Med Cert Gen",
+      "partOf": "Visible Clinic",
+      "product": "Automated medical certificate generator that produces clinic-ready documents from structured patient data, eliminating manual drafting.",
+      "tech": ["TypeScript", "Vue.js", "Node.js", "GCP"],
+      "url": "https://medcertgen.visibleclinic.com",
+      "screenshot": "/assets/screenshots/medcertgen.png"
+    }
+  ]
+}
