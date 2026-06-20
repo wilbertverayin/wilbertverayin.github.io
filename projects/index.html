@@ -202,7 +202,7 @@
     /* ── PROJECTS GRID ───────────────────────────────────── */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: var(--space-6);
     }
 
@@ -530,7 +530,6 @@
           </div>
           <p class="project-product">${p.product}</p>
           ${signals ? `<div class="project-signals">${signals}</div>` : ''}
-          <div class="tech-chips">${chips(p.tech)}</div>
           <div class="project-links">${link(p.url)}</div>
         </div>
       </div>`;
@@ -548,7 +547,6 @@
           </div>
           <p class="project-product">${p.product}</p>
           ${partOf}${role}
-          <div class="tech-chips">${chips(p.tech)}</div>
           <div class="project-links">${link(p.url)}</div>
         </div>
       </div>`;

@@ -151,8 +151,114 @@
 
     /* ── HERO ────────────────────────────────────────────── */
     .hero {
-      padding: calc(52px + var(--space-20)) 0 var(--space-20);
-      border-bottom: 1px solid var(--color-border);
+      padding: calc(52px + var(--space-20)) 0 var(--space-2);
+      text-align: center;
+    }
+
+    .hero-video-section {
+      padding-top: var(--space-4);
+      border-top: none;
+    }
+
+    .hero-video-frame {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      aspect-ratio: 16 / 9;
+      width: 60%;
+      margin: 0 auto;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .hero-video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-mute-hint {
+      position: absolute;
+      bottom: var(--space-4);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: oklch(12% 0.018 250 / 0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      padding: var(--space-2) var(--space-4);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-text);
+      cursor: pointer;
+      transition: opacity var(--dur-base) var(--ease-out),
+                  border-color var(--dur-fast) var(--ease-out);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .video-mute-hint:hover {
+      border-color: var(--color-accent-dim);
+      color: var(--color-white);
+    }
+
+    .video-mute-hint.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .mute-btn {
+      position: absolute;
+      top: var(--space-3);
+      right: var(--space-3);
+      background: oklch(12% 0.018 250 / 0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding: var(--space-2) var(--space-3);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-text);
+      cursor: pointer;
+      transition: border-color var(--dur-fast) var(--ease-out),
+                  color var(--dur-fast) var(--ease-out);
+      display: none;
+    }
+
+    .mute-btn:hover {
+      border-color: var(--color-accent-dim);
+      color: var(--color-accent);
+    }
+
+    .hero-video-frame:hover .mute-btn { display: block; }
+
+    .video-caption {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      margin-top: var(--space-3);
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+    }
+
+    .video-caption-name {
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .video-caption-role {
+      color: var(--color-muted);
+    }
+
+    .video-caption-role::before {
+      content: '·';
+      margin-right: var(--space-3);
     }
 
     .hero-eyebrow {
@@ -190,6 +296,8 @@
       max-width: 60ch;
       line-height: 1.65;
       margin-bottom: var(--space-10);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-meta {
@@ -200,6 +308,7 @@
       display: flex;
       gap: var(--space-6);
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     .hero-meta a {
@@ -213,6 +322,7 @@
       display: flex;
       gap: var(--space-4);
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     /* ── BUTTONS ─────────────────────────────────────────── */
@@ -328,6 +438,10 @@
       margin-bottom: var(--space-8);
     }
 
+    .projects-grid--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .project-card {
       background: var(--color-surface);
       border: 1px solid var(--color-border);
@@ -417,7 +531,28 @@
     /* ── CTA STRIP ───────────────────────────────────────── */
     .cta-strip {
       padding: var(--space-16) 0;
-      text-align: center;
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    .cta-avatar {
+      width: 220px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: top;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .cta-body {
+      text-align: left;
     }
 
     .cta-status {
@@ -534,8 +669,12 @@
 
       .build-grid { grid-template-columns: 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
+      .projects-grid--3 { grid-template-columns: 1fr; }
 
-      .hero-cta { flex-direction: column; align-items: flex-start; }
+      .hero-cta { flex-direction: column; align-items: center; }
+      .cta-inner { grid-template-columns: 1fr; }
+      .cta-avatar { width: 100%; aspect-ratio: 4 / 3; }
+      .cta-body { text-align: center; }
       .cta-actions { flex-direction: column; align-items: center; }
     }
 
@@ -559,7 +698,8 @@
     <a href="/" class="nav-logo">WV<span>.</span></a>
     <div class="nav-links">
       <a href="#build">What I Build</a>
-      <a href="/projects">Projects</a>
+      <a href="#work">Work</a>
+      <a href="/projects">All Projects</a>
       <a href="/resume" class="nav-resume">Resume ↗</a>
     </div>
   </div>
@@ -574,14 +714,18 @@
     <p class="hero-tagline rv">
       12 years shipping scalable systems for fintech, SaaS, and AI products.
     </p>
-    <nav class="hero-meta rv" aria-label="Contact links">
-      <a href="https://github.com/wilbertverayin" target="_blank" rel="noopener">github ↗</a>
-      <a href="https://linkedin.com/in/wilbertverayin" target="_blank" rel="noopener">linkedin ↗</a>
-      <span>Digital Nomad &middot; Remote</span>
-    </nav>
-    <div class="hero-cta rv">
-      <a href="#contact" class="btn btn-primary">Get In Touch</a>
-      <a href="/resume" class="btn btn-outline">View Resume →</a>
+  </section>
+
+  <!-- ── HERO VIDEO ─────────────────────────────────────── -->
+  <section class="section hero-video-section" aria-label="Featured video">
+    <div class="hero-video-frame rv">
+      <video id="harm-video" src="/assets/videos/harm-snaphaan.mp4" autoplay muted loop playsinline aria-label="Testimonial video"></video>
+      <button class="mute-btn" id="mute-btn" aria-label="Toggle mute">🔇 Unmute</button>
+      <button class="video-mute-hint" id="mute-hint" aria-label="Unmute video">🔇 Click to unmute</button>
+    </div>
+    <div class="video-caption rv">
+      <span class="video-caption-name">Harm Snaphaan</span>
+      <span class="video-caption-role">CEO · DataSpark</span>
     </div>
   </section>
 
@@ -594,7 +738,7 @@
         <span class="build-icon">⬡</span>
         <div class="build-title">Backend Systems</div>
         <p class="build-desc">
-          High-throughput APIs, event-driven architectures, and distributed services built to scale — Node.js, NestJS, Python, PostgreSQL, Redis.
+          High-throughput APIs, event-driven architectures, and distributed services built to scale — Node.js, NestJS, Fastify, Python, PostgreSQL, Redis.
         </p>
       </div>
 
@@ -614,13 +758,37 @@
         </p>
       </div>
 
+      <div class="build-card rv">
+        <span class="build-icon">▦</span>
+        <div class="build-title">Full-Stack Web Apps</div>
+        <p class="build-desc">
+          Performant web applications with SSR, SEO optimization, and self-serve analytics dashboards — Vue (Quasar), React, Next.js, GraphQL.
+        </p>
+      </div>
+
+      <div class="build-card rv">
+        <span class="build-icon">✦</span>
+        <div class="build-title">Quality Websites</div>
+        <p class="build-desc">
+          Fast, polished websites with sharp design, clean code, and strong fundamentals — performance, accessibility, and SEO baked in from the start.
+        </p>
+      </div>
+
+      <div class="build-card rv">
+        <span class="build-icon">◎</span>
+        <div class="build-title">Security & Auth</div>
+        <p class="build-desc">
+          Enterprise-grade RBAC, SSO flows, and audit-grade permission systems — Auth0 integrations, multi-tenant access controls, and secure API design.
+        </p>
+      </div>
+
     </div>
   </section>
 
-  <!-- ── PROJECTS ──────────────────────────────────────── -->
-  <section id="projects" class="section" aria-label="Projects">
-    <h2 class="s-label">Projects</h2>
-    <div id="featured-grid" class="projects-grid"></div>
+  <!-- ── WORK ─────────────────────────────────────────────── -->
+  <section id="work" class="section" aria-label="Work">
+    <h2 class="s-label">Work</h2>
+    <div id="combined-grid" class="projects-grid projects-grid--3"></div>
     <div class="projects-more rv">
       <a href="/projects" class="btn btn-outline">See More Projects →</a>
     </div>
@@ -628,15 +796,20 @@
 
   <!-- ── CTA STRIP ─────────────────────────────────────── -->
   <section id="contact" class="cta-strip" aria-label="Contact">
-    <div class="cta-status">
-      <span class="status-dot" aria-hidden="true"></span>
-      Open to remote opportunities
-    </div>
-    <h2 class="cta-heading">Let's work together.</h2>
-    <p class="cta-sub">Available for contracts, senior roles, and interesting problems.</p>
-    <a href="mailto:wilbertverayin@gmail.com" class="cta-email">wilbertverayin@gmail.com</a>
-    <div class="cta-actions">
-      <a href="/resume" class="btn btn-outline">View Resume →</a>
+    <div class="cta-inner">
+      <img src="/assets/images/wilbert.png" alt="Wilbert Verayin" class="cta-avatar rv">
+      <div class="cta-body">
+        <div class="cta-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to remote opportunities
+        </div>
+        <h2 class="cta-heading">Let's work together.</h2>
+        <p class="cta-sub">Available for contracts, senior roles, and interesting problems.</p>
+        <a href="mailto:wilbertverayin@gmail.com" class="cta-email">wilbertverayin@gmail.com</a>
+        <div class="cta-actions">
+          <a href="/resume" class="btn btn-outline">View Resume →</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -677,18 +850,67 @@
       </div>`;
   }
 
+  function renderProfessional(p) {
+    const visualEl = p.video
+      ? `<video class="project-video" src="${p.video}" autoplay muted loop playsinline aria-label="${p.name} demo"></video>`
+      : p.screenshot ? `<img src="${p.screenshot}" alt="${p.name} screenshot" class="project-video" style="object-fit:cover;">` : '';
+    const urlEl = p.url ? `<a href="${p.url}" class="project-link" target="_blank" rel="noopener">${p.url.replace(/^https?:\/\//, '')} ↗</a>` : '';
+    const impactEl = p.impact ? `<div class="project-sub"><span class="project-sub-name">Impact</span>${p.impact}</div>` : '';
+    const roleEl = p.role ? `<div class="project-sub"><span class="project-sub-name">Role</span>${p.role}</div>` : '';
+    return `
+      <div class="project-card rv">
+        ${visualEl}
+        <div class="project-body">
+          <div class="project-hd">
+            <span class="project-name">${p.name}</span>
+            ${urlEl}
+          </div>
+          <p class="project-desc">${p.product}</p>
+          <div class="project-subs">
+            ${roleEl}
+            ${impactEl}
+          </div>
+        </div>
+      </div>`;
+  }
+
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
 
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
 
+  (function () {
+    const video = document.getElementById('harm-video');
+    const hint  = document.getElementById('mute-hint');
+    const btn   = document.getElementById('mute-btn');
+
+    function syncLabels() {
+      const muted = video.muted;
+      btn.textContent  = muted ? '🔇 Unmute' : '🔊 Mute';
+      hint.textContent = muted ? '🔇 Click to unmute' : '🔊 Click to mute';
+    }
+
+    function toggle() {
+      video.muted = !video.muted;
+      hint.classList.add('hidden');
+      syncLabels();
+    }
+
+    document.querySelector('.hero-video-frame').addEventListener('click', toggle);
+
+    // hide the hint after 4 s so it doesn't linger forever
+    setTimeout(() => hint.classList.add('hidden'), 4000);
+  }());
+
   fetch('/data/projects.json')
     .then(r => r.json())
     .then(data => {
-      const featured = data.personal.filter(p => p.featured);
-      document.getElementById('featured-grid').innerHTML = featured.map(renderFeatured).join('');
-      document.querySelectorAll('#featured-grid .rv').forEach(el => io.observe(el));
+      const prof = data.professional.filter(p => p.id === 'dataspark' || p.id === 'odola');
+      const featured = data.personal.filter(p => p.featured).slice(0, 1);
+      const combined = [...prof.map(renderProfessional), ...featured.map(renderFeatured)];
+      document.getElementById('combined-grid').innerHTML = combined.join('');
+      document.querySelectorAll('#combined-grid .rv').forEach(el => io.observe(el));
     });
 </script>
 
