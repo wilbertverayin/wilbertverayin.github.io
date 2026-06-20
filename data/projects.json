@@ -100,13 +100,22 @@
       "screenshot": "/assets/screenshots/medcertgen.png"
     },
     {
-      "id": "jomella-pides",
-      "name": "Jomella Pides",
+      "id": "jomel-lapides",
+      "name": "Jomel Lapides",
       "partOf": "Visible Clinic",
-      "product": "Clinic portal for Jomella Pides, built on the Visible Clinic platform.",
+      "product": "Clinic portal for Jomel Lapides, built on the Visible Clinic platform.",
       "tech": ["TypeScript", "Vue.js", "GCP"],
       "url": "https://jomellapides.visibleclinic.com",
       "screenshot": "/assets/screenshots/jomellapides.png"
+    },
+    {
+      "id": "odola",
+      "name": "Odola",
+      "product": "Online banking platform for UK immigrants. Built admin tooling, managed legal document flows, and optimized build artifacts.",
+      "role": "Consultant",
+      "tech": ["Node.js", "Fastify", "GCP", "Terraform"],
+      "url": "https://odola.com",
+      "screenshot": "/assets/screenshots/odola.png"
     },
     {
       "id": "clearvision-little-stars",

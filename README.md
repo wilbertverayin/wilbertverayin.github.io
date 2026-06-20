@@ -28,8 +28,9 @@ Static HTML/CSS/JS — no build step, no framework. Deployed via GitHub Pages.
   - [Eye Triage](https://eyetriage.visibleclinic.com) — AI ophthalmology triage
   - [OnlineHPI](https://onlinehpi.visibleclinic.com) — AI-assisted diagnosis intake
   - [Med Cert Gen](https://medcertgen.visibleclinic.com) — Automated medical certification
-  - [Jomella Pides](https://jomellapides.visibleclinic.com) — Clinic portal
+  - [Jomel Lapides](https://jomellapides.visibleclinic.com) — Clinic portal
   - [Clear Vision Little Stars](https://clearvisionlittlestars.visibleclinic.com) — Pediatric eye clinic portal
+- [Odola](https://odola.com) — Online banking for UK immigrants
 
 ## Deployment
 
