@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- 0° – up – GRAY -->
+  <g transform="translate(100,100) rotate(0)">
+    <rect fill="#b2b5b9" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="-17" y="-82" width="12" height="82"/>
+    <rect fill="#b2b5b9" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="5"   y="-82" width="12" height="82"/>
+  </g>
+  <!-- 60° – upper-right – GRAY -->
+  <g transform="translate(100,100) rotate(60)">
+    <rect fill="#b2b5b9" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="-17" y="-82" width="12" height="82"/>
+    <rect fill="#b2b5b9" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="5"   y="-82" width="12" height="82"/>
+  </g>
+  <!-- 300° – upper-left – GRAY -->
+  <g transform="translate(100,100) rotate(300)">
+    <rect fill="#b2b5b9" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="-17" y="-82" width="12" height="82"/>
+    <rect fill="#b2b5b9" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="5"   y="-82" width="12" height="82"/>
+  </g>
+  <!-- 240° – lower-left – TEAL -->
+  <g transform="translate(100,100) rotate(240)">
+    <rect fill="#2d8b8e" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="-17" y="-82" width="12" height="82"/>
+    <rect fill="#2d8b8e" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="5"   y="-82" width="12" height="82"/>
+  </g>
+  <!-- 120° – lower-right – GOLD -->
+  <g transform="translate(100,100) rotate(120)">
+    <rect fill="#c49a28" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="-17" y="-82" width="12" height="82"/>
+    <rect fill="#c49a28" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="5"   y="-82" width="12" height="82"/>
+  </g>
+  <!-- 180° – down – left=TEAL, right=GOLD (local coords swap on 180°) -->
+  <g transform="translate(100,100) rotate(180)">
+    <rect fill="#c49a28" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="-17" y="-82" width="12" height="82"/>
+    <rect fill="#2d8b8e" stroke="#575757" stroke-width="1.5" stroke-linejoin="round" x="5"   y="-82" width="12" height="82"/>
+  </g>
+</svg>

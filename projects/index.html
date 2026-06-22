@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects — Wilbert Verayin</title>
   <meta property="og:title" content="Projects — Wilbert Verayin">
-  <meta property="og:description" content="12 years shipping scalable systems for fintech, SaaS, and AI products.">
+  <meta property="og:description" content="13 years shipping scalable systems for fintech, SaaS, and AI products.">
   <meta property="og:image" content="https://wilbertverayin.com/assets/screenshots/wilbertverayin.png">
   <meta property="og:url" content="https://wilbertverayin.com/projects">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://wilbertverayin.com/assets/screenshots/wilbertverayin.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -102,14 +103,15 @@
     }
 
     .nav-logo {
-      font-family: var(--font-mono);
-      font-size: var(--text-sm);
-      font-weight: 700;
-      color: var(--color-white);
-      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
     }
 
-    .nav-logo span { color: var(--color-accent); }
+    .nav-logo img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
 
     .nav-links {
       display: flex;
@@ -176,7 +178,6 @@
     /* ── SECTION LABEL ───────────────────────────────────── */
     .section {
       padding: var(--space-16) 0;
-      border-bottom: 1px solid var(--color-border);
     }
 
     .s-label {
@@ -450,7 +451,7 @@
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav" aria-label="Site navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">WV<span>.</span></a>
+    <a href="/" class="nav-logo"><img src="/assets/images/logo.svg" alt="Wilbert Verayin"></a>
     <div class="nav-links">
       <a href="/">← Home</a>
       <a href="/resume" class="nav-resume">Resume ↗</a>
@@ -562,7 +563,7 @@
   fetch('/data/projects.json')
     .then(r => r.json())
     .then(data => {
-      document.getElementById('prof-grid').innerHTML = data.professional.map(renderProfCard).join('');
+      document.getElementById('prof-grid').innerHTML = data.professional.filter(p => !p.hidden).map(renderProfCard).join('');
       document.getElementById('personal-grid').innerHTML = data.personal.map(renderPersonalCard).join('');
       observe();
     });

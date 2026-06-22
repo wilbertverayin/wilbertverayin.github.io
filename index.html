@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Wilbert Verayin — Senior Full Stack Engineer</title>
   <meta property="og:title" content="Wilbert Verayin — Senior Full Stack Engineer">
-  <meta property="og:description" content="12 years shipping scalable systems for fintech, SaaS, and AI products.">
+  <meta property="og:description" content="13 years shipping scalable systems for fintech, SaaS, and AI products.">
   <meta property="og:image" content="https://wilbertverayin.com/assets/screenshots/wilbertverayin.png">
   <meta property="og:url" content="https://wilbertverayin.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://wilbertverayin.com/assets/screenshots/wilbertverayin.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -109,14 +110,15 @@
     }
 
     .nav-logo {
-      font-family: var(--font-mono);
-      font-size: var(--text-sm);
-      font-weight: 700;
-      color: var(--color-white);
-      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
     }
 
-    .nav-logo span { color: var(--color-accent); }
+    .nav-logo img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
 
     .nav-links {
       display: flex;
@@ -155,9 +157,10 @@
       text-align: center;
     }
 
-    .hero-video-section {
+    .section.hero-video-section {
       padding-top: var(--space-4);
       border-top: none;
+      border-bottom: none;
     }
 
     .hero-video-frame {
@@ -363,10 +366,20 @@
       border-color: var(--color-accent-dim);
     }
 
+    .btn-ghost {
+      background: transparent;
+      color: var(--color-muted);
+      border-color: transparent;
+    }
+
+    .btn-ghost:hover {
+      color: var(--color-accent);
+      border-color: transparent;
+    }
+
     /* ── SECTION ─────────────────────────────────────────── */
     .section {
       padding: var(--space-16) 0;
-      border-bottom: 1px solid var(--color-border);
     }
 
     .s-label {
@@ -535,24 +548,26 @@
 
     .cta-inner {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 260px 1fr;
       gap: var(--space-12);
       align-items: center;
     }
 
     .cta-avatar {
-      width: 220px;
+      width: 100%;
       aspect-ratio: 3 / 4;
       object-fit: cover;
       object-position: top;
       border-radius: var(--radius-md);
       border: 1px solid var(--color-border);
       display: block;
-      flex-shrink: 0;
     }
 
     .cta-body {
       text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .cta-status {
@@ -611,7 +626,7 @@
     .cta-actions {
       display: flex;
       gap: var(--space-4);
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
     }
 
@@ -695,7 +710,7 @@
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav" aria-label="Site navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">WV<span>.</span></a>
+    <a href="/" class="nav-logo"><img src="/assets/images/logo.svg" alt="Wilbert Verayin"></a>
     <div class="nav-links">
       <a href="#build">What I Build</a>
       <a href="#work">Work</a>
@@ -712,7 +727,7 @@
     <p class="hero-eyebrow rv">Senior Full Stack Engineer</p>
     <h1 class="hero-name rv">Wilbert Verayin</h1>
     <p class="hero-tagline rv">
-      12 years shipping scalable systems for fintech, SaaS, and AI products.
+      13 years shipping scalable systems for fintech, SaaS, and AI products.
     </p>
   </section>
 
@@ -796,18 +811,21 @@
 
   <!-- ── CTA STRIP ─────────────────────────────────────── -->
   <section id="contact" class="cta-strip" aria-label="Contact">
-    <div class="cta-inner">
-      <img src="/assets/images/wilbert.png" alt="Wilbert Verayin" class="cta-avatar rv">
-      <div class="cta-body">
-        <div class="cta-status">
-          <span class="status-dot" aria-hidden="true"></span>
-          Open to remote opportunities
-        </div>
-        <h2 class="cta-heading">Let's work together.</h2>
-        <p class="cta-sub">Available for contracts, senior roles, and interesting problems.</p>
-        <a href="mailto:wilbertverayin@gmail.com" class="cta-email">wilbertverayin@gmail.com</a>
-        <div class="cta-actions">
-          <a href="/resume" class="btn btn-outline">View Resume →</a>
+    <div class="wrap">
+      <div class="cta-inner">
+        <img src="/assets/images/wilbert.png" alt="Wilbert Verayin" class="cta-avatar">
+        <div class="cta-body">
+          <div class="cta-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Open to remote opportunities
+          </div>
+          <h2 class="cta-heading">Let's work together.</h2>
+          <p class="cta-sub">Available for contracts, senior roles, and interesting problems.</p>
+          <a href="mailto:wilbertverayin@gmail.com" class="cta-email">wilbertverayin@gmail.com</a>
+          <div class="cta-actions">
+            <a href="/resume" class="btn btn-outline">View Resume →</a>
+            <a href="https://github.com/wilbertverayin" class="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
         </div>
       </div>
     </div>
@@ -906,7 +924,7 @@
   fetch('/data/projects.json')
     .then(r => r.json())
     .then(data => {
-      const prof = data.professional.filter(p => p.id === 'dataspark' || p.id === 'odola');
+      const prof = data.professional.filter(p => !p.hidden && (p.id === 'dataspark' || p.id === 'odola' || p.id === 'heartbeat'));
       const featured = data.personal.filter(p => p.featured).slice(0, 1);
       const combined = [...prof.map(renderProfessional), ...featured.map(renderFeatured)];
       document.getElementById('combined-grid').innerHTML = combined.join('');

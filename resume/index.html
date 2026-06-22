@@ -11,6 +11,7 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://wilbertverayin.com/assets/screenshots/wilbertverayin.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -114,14 +115,15 @@
     }
 
     .nav-logo {
-      font-family: var(--font-mono);
-      font-size: var(--text-sm);
-      font-weight: 700;
-      color: var(--color-white);
-      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
     }
 
-    .nav-logo span { color: var(--color-accent); }
+    .nav-logo img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
 
     .nav-links {
       display: flex;
@@ -282,12 +284,11 @@
     /* ── SECTION ─────────────────────────────────────────── */
     .section {
       padding: var(--space-16) 0;
-      border-bottom: 1px solid var(--color-border);
     }
 
     /* ── ABOUT ───────────────────────────────────────────── */
     .about-body {
-      max-width: 72ch;
+      max-width: 100%;
     }
 
     .about-body p {
@@ -302,19 +303,68 @@
     .about-body strong { color: var(--color-white); font-weight: 500; }
 
     /* ── EXPERIENCE ──────────────────────────────────────── */
-    .exp-list { display: flex; flex-direction: column; }
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    /* Vertical timeline line */
+    .exp-list::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(
+        to bottom,
+        transparent 0,
+        var(--color-border) 40px,
+        var(--color-border) calc(100% - 40px),
+        transparent 100%
+      );
+    }
 
     .role {
-      padding: var(--space-6) 0;
+      position: relative;
+      padding: var(--space-6) 0 var(--space-6) var(--space-4);
       border-bottom: 1px solid var(--color-border);
-      border-left: 2px solid transparent;
-      padding-left: var(--space-4);
-      margin-left: calc(-1 * var(--space-4));
-      transition: border-color var(--dur-fast) var(--ease-out);
     }
 
     .role:last-child { border-bottom: none; }
-    .role:hover { border-left-color: var(--color-accent-dim); }
+
+    /* Circle node on the timeline */
+    .role::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: calc(var(--space-6) + 2px);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--color-bg);
+      border: 1.5px solid var(--color-border);
+      transition: border-color var(--dur-base) var(--ease-out),
+                  background var(--dur-base) var(--ease-out),
+                  box-shadow var(--dur-base) var(--ease-out);
+      z-index: 1;
+    }
+
+    /* Current role — circle is always lit */
+    .role:first-child::before {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px oklch(82% 0.15 172 / 0.18);
+    }
+
+    /* All roles highlight on hover */
+    .role:hover::before {
+      border-color: var(--color-accent);
+      background: var(--color-accent);
+      box-shadow: 0 0 0 5px oklch(82% 0.15 172 / 0.14);
+    }
 
     .role-hd {
       display: flex;
@@ -674,7 +724,6 @@
 
       .role {
         padding-left: var(--space-3);
-        margin-left: calc(-1 * var(--space-3));
       }
     }
 
@@ -715,7 +764,7 @@
 <!-- ── NAV ──────────────────────────────────────────────── -->
 <nav class="nav" aria-label="Site navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo">WV<span>.</span></a>
+    <a href="/" class="nav-logo"><img src="/assets/images/logo.svg" alt="Wilbert Verayin"></a>
     <div class="nav-links">
       <a href="/">← Home</a>
       <a href="#about">About</a>
@@ -975,7 +1024,7 @@
     .then(r => r.json())
     .then(data => {
       const expEl = document.getElementById('exp-list');
-      expEl.innerHTML = renderExperience(data.experience);
+      expEl.innerHTML = renderExperience(data.experience.filter(r => !r.hidden));
       observe(expEl);
 
       const projEl = document.getElementById('projects-grid');
