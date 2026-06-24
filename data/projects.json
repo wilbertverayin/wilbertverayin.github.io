@@ -121,15 +121,6 @@
       "screenshot": "/assets/screenshots/jomellapides.png"
     },
     {
-      "id": "ivip",
-      "name": "IVIP",
-      "product": "IntraVitreal Injection Planner — web app that helps ophthalmologists track patients receiving regular intravitreal injections and plan their next appointment.",
-      "tech": ["TypeScript", "Vue.js", "Node.js", "GCP"],
-      "url": "https://ivip.visibleclinic.com",
-      "screenshot": "/assets/screenshots/ivip.png",
-      "partOf": "Visible Clinic"
-    },
-    {
       "id": "clearvision-little-stars",
       "name": "Clear Vision Little Stars",
       "partOf": "Visible Clinic",
