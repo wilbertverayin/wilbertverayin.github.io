@@ -75,7 +75,6 @@
       "product": "AI-integrated SaaS for medical professionals. Google Vision and Gemma models power image-based diagnosis suggestions and clinical triage.",
       "role": "Founder — end-to-end design, build, and deployment",
       "tech": ["TypeScript", "Node.js", "Vue.js", "Google Vision", "Gemma", "GCP"],
-      "url": "https://visibleclinic.com",
       "screenshot": "/assets/screenshots/visibleclinic.png",
       "featured": true,
       "subs": [

@@ -16,21 +16,7 @@ Static HTML/CSS/JS — no build step, no framework. Deployed via GitHub Pages.
 
 ## Projects
 
-**Professional**
-- [Dataspark](https://dataspark.nl) — ETL & analytics platform (Sep 2025 – Present)
-- [Freedom Family](https://freedom.h.ki) — Global publishing SaaS (Mar 2023 – Aug 2025)
-- [Heartbeat](https://h.ki) — Patient vitals monitoring
-- [Billease](https://billease.com) — BNPL fintech, 10M+ downloads (Sep 2022 – Mar 2023)
-- [ContactOut](https://contactout.com) — Recruiter contact tool (Jan 2022 – Aug 2022)
-
-**Personal**
-- [Visible Clinic](https://visibleclinic.com) — AI SaaS for medical professionals (Google Vision + Gemma)
-  - [Eye Triage](https://eyetriage.visibleclinic.com) — AI ophthalmology triage
-  - [OnlineHPI](https://onlinehpi.visibleclinic.com) — AI-assisted diagnosis intake
-  - [Med Cert Gen](https://medcertgen.visibleclinic.com) — Automated medical certification
-  - [Jomel Lapides](https://jomellapides.visibleclinic.com) — Clinic portal
-  - [Clear Vision Little Stars](https://clearvisionlittlestars.visibleclinic.com) — Pediatric eye clinic portal
-- [Odola](https://odola.com) — Online banking for UK immigrants
+Project entries live only in [data/projects.json](data/projects.json). Edit that file, not this README.
 
 ## Deployment
 
